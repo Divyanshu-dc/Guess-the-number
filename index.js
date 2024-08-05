@@ -11,9 +11,7 @@ function checkGuess(){
     let userGuess = Number(userInput.value);
     guessCount++;
 
-    
-
-    if(!userGuess||userGuess<1||userGuess>100){
+     if(!userGuess||userGuess<1||userGuess>100){
         resultStatement.textContent =`Please Enter a value between 1 and 100.`
     }else if(randomNumber === userGuess){
         resultStatement.textContent = `Congrats! You guessed it correct in ${guessCount} attempt.`;
@@ -33,7 +31,7 @@ function resetGame(){
     userInput.disabled = false;
     submitbutton.disabled = false;
     userInput.value = "";
-    let randomNumber = Math.floor(Math.random()*100)+1;
+    randomNumber = Math.floor(Math.random()*100)+1;
     resultStatement.textContent = "";
     guessCount = 0;
 }
